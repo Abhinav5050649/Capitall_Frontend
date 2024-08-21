@@ -22,26 +22,24 @@ export default function Items({ data }) {
     return (
         <>
             <div className="mx-auto max-w-sm rounded overflow-hidden shadow-lg sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl border bg-white text-black border-green-500 mt-4">
-                <div className="w-40 h-28">
-                    <img className="w-full h-full object-contain" src={data.itemImageURL} alt={data.itemName} />
-                </div>
-                <div className="px-4 py-2">
-                    <div className="font-bold text-sm mb-1">{data.itemName}</div>
-                    <p className="text-gray-700 text-xs">{data.itemDescription}</p>
-                    <div className="font-bold text-xs mb-1">Price: ${data.itemPrice}</div>
-                    <div className="font-bold text-xs mb-1">Sold: {data.itemSold ? "Yes" : "No"}</div>
+                <img className="w-full" src={data.itemImageURL} alt={data.itemName} />
+                <div className="px-6 py-4">
+                    <div className="font-bold text-xl mb-2">{data.itemName}</div>
+                    <p className="text-gray-700 text-base">{data.itemDescription}</p>
+                    <div className="font-bold text-l mb-2">Price: ${data.itemPrice}</div>
+                    <div className="font-bold text-l mb-2">Sold: {data.itemSold ? "Yes" : "No"}</div>
                 </div>
                 {!data.itemSold && (
-                    <div className="px-4 pb-2 flex justify-between">
+                    <div className="px-6 pb-4 flex justify-between">
                         <button
                             onClick={handleUpdate}
-                            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded text-xs"
+                            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
                         >
                             Update
                         </button>
                         <button
                             onClick={handleDelete}
-                            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded text-xs"
+                            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
                         >
                             Delete
                         </button>

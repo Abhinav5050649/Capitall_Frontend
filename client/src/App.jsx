@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -13,7 +13,6 @@ import Create from './pages/Create';
 function App() {
 
   return (
-    <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/signup' element={<Signup/>}></Route>
@@ -24,7 +23,6 @@ function App() {
         <Route path='/market' element={<ProtectedComponent><Market/></ProtectedComponent>} ></Route>
         <Route path='/purchases' element={<ProtectedComponent><Purchases/></ProtectedComponent>} ></Route>
       </Routes>
-    </BrowserRouter>
   )
 }
 

@@ -26,7 +26,7 @@ export default function Purchases() {
     return (
         <>
             <DNav />
-            <div className="flex flex-col items-center min-h-screen bg-gray-400">
+            <div className="flex flex-col items-center min-h-screen bg-white">
                 <h3 className="text-3xl font-bold mt-6 mb-4 text-gray-800">Purchase History: Review the Items You've Bought!</h3>
                 {data.length === 0 ? (
                     <h5 className="text-2xl font-bold mt-4 text-gray-900 mb-4">No purchased items!</h5>

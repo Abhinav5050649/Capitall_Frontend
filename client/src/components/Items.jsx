@@ -21,7 +21,7 @@ export default function Items({ data }) {
 
     return (
         <>
-            <div className="mx-auto max-w-sm rounded overflow-hidden w-40 h-60 shadow-lg sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl border bg-white text-black border-green-500 mt-4">
+            <div className="mx-auto max-w-sm rounded overflow-hidden shadow-lg sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl border bg-white text-black border-green-500 mt-4">
                 <div className="w-40 h-28">
                     <img className="w-full h-full object-contain" src={data.itemImageURL} alt={data.itemName} />
                 </div>
